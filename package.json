@@ -1,0 +1,42 @@
+{
+  "name": "react-lite-app-esbuild",
+  "version": "0.1.0",
+  "description": "Create a nice and clean react project. Made with EsBuild",
+  "scripts": {
+    "start": "npm run power | npm run server",
+    "build": "node ./configs/build.js",
+    "power": "onchange -i -k 'src/**/*' -- node ./configs/dev-server.js",
+    "server": "wds --node-resolve --app-index public/ --root-dir='public' --port=3000 --open --watch",
+    "startc": "craco start",
+    "buildc": "craco build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "onchange": "^7.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.4",
+    "@web/dev-server": "^0.1.4",
+    "autoprefixer": "^9.8.6",
+    "esbuild": "^0.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
